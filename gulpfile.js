@@ -16,7 +16,13 @@ const gulp = require('gulp'),
     errorHandler = require('./gulp/tasks/error-handler'),
 
     //This compiles our SASS files
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+
+    //Makes the SASS files compile beautified CSS
+    cssBeautify = require('gulp-cssbeautify'),
+    
+    //Gives the CSS prefixes like webkit to the CSS
+    cssAutoPrefixer = require('gulp-autoprefixer');
 
 //=======================
 //ALL CSS AND SASS TASKS
@@ -25,6 +31,8 @@ gulp.task('sass', function () {
     return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'])
         .pipe(errorHandler.customPlumber('Error Running Sass'))
         .pipe(sass())
+        .pipe(cssAutoPrefixer())
+        .pipe(cssBeautify())
         .pipe(gulp.dest('src/css'))
         .pipe(browserSync.stream());
 });
@@ -33,6 +41,8 @@ gulp.task('sass-global', function () {
     return gulp.src(['src/scss/global/*.scss'])
         .pipe(errorHandler.customPlumber('Error in Global Sass'))
         .pipe(sass())
+        .pipe(cssAutoPrefixer())
+        .pipe(cssBeautify())
         .pipe(gulp.dest('src/css/global/*.css'))
         .pipe(browserSync.stream());
 });
@@ -42,6 +52,8 @@ gulp.task('sass-modules', function () {
     return gulp.src(['src/css/modules/*.scss'])
         .pipe(errorHandler.customPlumber('Error in Modules Sass'))
         .pipe(sass())
+        .pipe(cssAutoPrefixer())
+        .pipe(cssBeautify())
         .pipe(gulp.dest('src/css/modules/*.css'))
         .pipe(browserSync.stream());
 });
