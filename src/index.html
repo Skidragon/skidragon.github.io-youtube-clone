@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="video video-section">
+        <iframe class="video-playing" src="https://www.youtube.com/embed/CJn1Exz6WwM" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+        <h2 class="video__title">Wizard and Workflow with TheSabby
+            <i class="fas fa-arrow-up"></i>
+        </h2>
+        <p class="video__view-count">420,882 views</p>
+        <div class="video__btn-container">
+            <button class="btn btn--circle btn-like video__btn video__btn--active btn--transparent">
+                <i class="fas fa-thumbs-up"></i>
+            </button>
+            <button class="btn btn--circle btn-dislike video__btn video__btn--active btn--transparent">
+                <i class="fas fa-thumbs-down"></i>
+            </button>
+            <button class="btn btn--circle btn-share video__btn video__btn--active btn--transparent">
+                <i class="fas fa-share"></i>
+            </button>
+            <button class="btn btn--circle btn-download video__btn video__btn--active btn--transparent">
+                <i class="fas fa-download"></i>
+            </button>
+            <button class="btn btn--circle btn-add-to video__btn video__btn--active btn--transparent">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+
+        <div class="video__owner-info">
+            <button class="btn-profile btn--circle"></button>
+            <button class="video__btn-subscribe">Subscribe</button>
+        </div>
+    </section>
+
+
+    <section class="comment-maker">
+        <form class="comment-maker__form" action="" method="POST">
+            <input type="text" placeholder="Add a public comment...">
+        </form>
+    </section>
+
+    <section class="comments">
+        <div class="comment">
+            <p class="comment__user-comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta asperiores unde, corporis ad eos hic adipisci rem. Fuga, quam architecto.</p>
+            <p class="comment__username">Skidragon</p>
+            <p class="comment__age">1 day ago</p>
+        </div>
+    </section>
+</body>
+
+</html>

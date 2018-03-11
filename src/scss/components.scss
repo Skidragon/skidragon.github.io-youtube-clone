@@ -1,0 +1,41 @@
+        @import 'base.scss';
+        @mixin btn-transperent-bg {
+            background: transparent;
+            outline: 0;
+            border: 0;
+        }
+
+        .video {
+            &__btn {
+                height: $circle-diam;
+                width: $circle-diam;
+                font-size: 1.5rem;
+                @include sm-device {
+                    &:active {
+                        background: $btn--active-bg-color;
+                    }
+                }
+            }
+            &__btn-subscribe {
+                background: $btn-subscribe-color;
+                height: $rect-height;
+                width: $rect-width;
+            }
+        }
+        .btn-profile {
+            height: $circle-diam / 1.5;
+            width: $circle-diam / 1.5;
+            background-image: url(https://airfreeusa.files.wordpress.com/2014/05/cachorro6.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%; /* To fill the dimensions of container (button), or */
+            outline: 0;
+            border: 0;
+        }
+
+        .btn--transparent {
+            @include btn-transperent-bg();
+        }
+
+        .btn--circle {
+            border-radius: 50%;
+        }

@@ -1,0 +1,13 @@
+@import 'modules/_media-queries';
+@import 'global/_variables';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vw;
+}

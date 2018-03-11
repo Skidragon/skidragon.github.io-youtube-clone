@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html,
+body {
+  width: 100vw;
+  height: 100vw; }
+
+.video__btn {
+  height: 4rem;
+  width: 4rem;
+  font-size: 1.5rem; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .video__btn:active {
+      background: lightcoral; } }
+
+.video__btn-subscribe {
+  background: #bb2323;
+  height: 4rem;
+  width: 8rem; }
+
+.btn-profile {
+  height: 2.66667rem;
+  width: 2.66667rem;
+  background-image: url(https://airfreeusa.files.wordpress.com/2014/05/cachorro6.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* To fill the dimensions of container (button), or */
+  outline: 0;
+  border: 0; }
+
+.btn--transparent {
+  background: transparent;
+  outline: 0;
+  border: 0; }
+
+.btn--circle {
+  border-radius: 50%; }
